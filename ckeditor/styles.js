@@ -40,8 +40,8 @@ CKEDITOR.stylesSet.add( 'default', [
 		element: 'div',
 		styles: {
 			padding: '5px 10px',
-			background: '#eee',
-			border: '1px solid #ccc'
+			background: '#8f8f8f',
+			border: '1px solid #8f8f8f'
 		}
 	},
 
@@ -100,7 +100,7 @@ CKEDITOR.stylesSet.add( 'default', [
 			cellpadding: '5',
 			cellspacing: '0',
 			border: '1',
-			bordercolor: '#ccc'
+			bordercolor: '#8f8f8f'
 		},
 		styles: {
 			'border-collapse': 'collapse'

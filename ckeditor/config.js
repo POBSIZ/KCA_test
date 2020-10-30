@@ -8,8 +8,8 @@ CKEDITOR.editorConfig = function( config ) {
 	// For complete reference see:
 	// https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_config.html
 
-	config.height = '600px'; //Editor 높이
-
+	config.height = '25em'; //Editor 높이
+	config.width = '30em';
 	
 	// The toolbar groups arrangement, optimized for two toolbar rows.
 	config.toolbarGroups = [

@@ -6,18 +6,19 @@
   <title>KCA</title>
   <!-- Link Swiper's CSS -->
   <link rel="stylesheet" href="swiper-bundle.css">
-  <!-- <script src="/ckeditor/ckeditor.js"></script> -->
-  <script src="//cdn.ckeditor.com/4.15.0/standard/ckeditor.js"></script>
+  <script type="text/javascript" src="ckeditor/ckeditor.js"></script>
 
   <!-- Demo styles -->
   <style>
     *{
         outline: none;
+        transition: .3s;
     }
     html,
     body {
         position: relative;
         height: 100%;
+        background-color: #8f8f8f;
     }
 
     body {
@@ -54,21 +55,33 @@
         align-items: center;
     }
     .temp_box{
-        height: 30em;
-        width: 30em;
-        border-radius: 40px 40px 40px 40px;
-        background-color: #8f8f8f;
+      display: inline-block;
+      height: 30em;
+      width: 30em;
+      /* border-radius: 40px 40px 40px 40px; */
+      background-color: #8f8f8f;
+      box-shadow:  20px 20px 60px #666666, -20px -20px 60px #c0c0c0;
     }
 
-    .swiper-slide a{
-        display: inline-block;
-        position: absolute;
-        bottom: 45em;
-        color: white;
-        background-color: #7a7a7a;
-        height: 30px;
-        width: 20%;
-        border-radius: 40px 40px 40px 40px;
+    .card_type{
+      display: inline-block;
+      position: absolute;
+      bottom: 65em;
+      color: white;
+      background-color: #7a7a7a;
+      height: 50px;
+      width: 20%;
+      padding-left: 8%;
+      border-radius: 40px 40px 40px 40px;
+      box-shadow:  10px 10px 15px #666666, -10px -10px 15px #c0c0c0;
+    }.card_type:active{
+      box-shadow: inset 16px 16px 29px #666666, inset -16px -16px 29px #c0c0c0;
+    }.card_type:hover{
+      box-shadow: inset 16px 16px 29px #666666, inset -16px -16px 29px #c0c0c0;
+    }
+
+    .page_num{
+      
     }
   </style>
 </head>
@@ -77,20 +90,88 @@
   <!-- Swiper -->
   <div class="swiper-container">
     <div class="swiper-wrapper">
-      <div class="swiper-slide"><a>#1</a><div class="temp_box"></div></div>
-      <div class="swiper-slide"><a>#2</a><div class="temp_box"></div></div>
-      <div class="swiper-slide"><a>#3</a><div class="temp_box"></div></div>
-      <div class="swiper-slide"><a>#4</a><div class="temp_box"></div></div>
-      <div class="swiper-slide"><a>#5</a><div class="temp_box"></div></div>
-      <div class="swiper-slide"><a>#6</a><div class="temp_box"></div></div>
-      <div class="swiper-slide"><a>#7</a><div class="temp_box"></div></div>
-      <div class="swiper-slide"><a>#8</a><div class="temp_box"></div></div>
-      <div class="swiper-slide"><a>#9</a><div class="temp_box"></div></div>
-      <div class="swiper-slide"><a>#10</a><div class="temp_box"></div></div>
-      <div class="swiper-slide"><a>#11</a><div class="temp_box"></div></div>
-    </div>
-    
 
+      <div class="swiper-slide">
+        <div class="temp_box">
+          <div>
+            <textarea class="ckeditor" name="contents"></textarea>
+          </div>
+        </div>
+        <select class='card_type'>
+          <option value="Pimg">상품 사진</option>
+          <option value="Pdimg">상품 상세사진</option>
+          <option value="Pifor">상품 소개</option>
+          <option value="Psize">상품 사이즈</option>
+          <option value="info">안내사항</option>
+        </select>
+        <div class="page_num">1</div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="temp_box">
+          <div>
+            <textarea class="ckeditor" name="contents"></textarea>
+          </div>
+        </div>
+        <select class='card_type'>
+          <option value="Pimg">상품 사진</option>
+          <option value="Pdimg">상품 상세사진</option>
+          <option value="Pifor">상품 소개</option>
+          <option value="Psize">상품 사이즈</option>
+          <option value="info">안내사항</option>
+        </select>
+        <div class="page_num">2</div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="temp_box">
+          <div>
+            <textarea class="ckeditor" name="contents"></textarea>
+          </div>
+        </div>
+        <select class='card_type'>
+          <option value="Pimg">상품 사진</option>
+          <option value="Pdimg">상품 상세사진</option>
+          <option value="Pifor">상품 소개</option>
+          <option value="Psize">상품 사이즈</option>
+          <option value="info">안내사항</option>
+        </select>
+        <div class="page_num">3</div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="temp_box">
+          <div>
+            <textarea class="ckeditor" name="contents"></textarea>
+          </div>
+        </div>
+        <select class='card_type'>
+          <option value="Pimg">상품 사진</option>
+          <option value="Pdimg">상품 상세사진</option>
+          <option value="Pifor">상품 소개</option>
+          <option value="Psize">상품 사이즈</option>
+          <option value="info">안내사항</option>
+        </select>
+        <div class="page_num">4</div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="temp_box">
+          <div>
+            <textarea class="ckeditor" name="contents"></textarea>
+          </div>
+        </div>
+        <select class='card_type'>
+          <option value="Pimg">상품 사진</option>
+          <option value="Pdimg">상품 상세사진</option>
+          <option value="Pifor">상품 소개</option>
+          <option value="Psize">상품 사이즈</option>
+          <option value="info">안내사항</option>
+        </select>
+        <div class="page_num">5</div>
+      </div>
+      
+    </div>
 
     <!-- Add Pagination -->
     <div class="swiper-pagination"></div>
