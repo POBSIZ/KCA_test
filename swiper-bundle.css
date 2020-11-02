@@ -12,6 +12,7 @@
 
  *{
    transition: .3s;
+   font-family: 'Noto Sans KR', sans-serif;
  }
  @font-face {
     font-family: 'swiper-icons';
