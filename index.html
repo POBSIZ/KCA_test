@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="swiper-bundle.css">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
   <script type="text/javascript" src="ckeditor/ckeditor.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
 
   <!-- Demo styles -->
   <style>
@@ -80,10 +82,10 @@
       padding-left: 2%;
       border-radius: 40px 40px 40px 40px;
       box-shadow:  5px 5px 13px #666666, -5px -5px 13px #c0c0c0;
-    }.card_type:active{
-      box-shadow: inset 10px 10px 10px #666666, inset -10px -10px 10px #c0c0c0;
+      transition: 1s;
     }.card_type:hover{
       box-shadow: inset 10px 10px 10px #666666, inset -10px -10px 10px #c0c0c0;
+      transition: 1s;
     }
 
     .page_num{}
@@ -120,26 +122,36 @@
 
       <div class="swiper-slide">
         <div class="temp_box">
-          <div>
+
+          <div class="txt_box">
+            <span class="txt_title">BRAND</span>
+            <p class="txt_inf">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget augue nisl. 
+              Suspendisse tempus sapien et risus bibendum rutrum. Morbi 
+              elementum ex non dui tempus, in facilisis ipsum mattis. Donec consectetur 
+              sit amet sem nec lobortis. In lacus nulla, ultrices id sodales sed, dapibus nec augue. 
+              Sed sollicitudin enim eu nisl tempus, at iaculis nulla varius. Proin porttitor orci eleifend 
+            </p>
+          </div>
+
+          <div class="txt_box">
+            <span class="txt_title">BRAND</span>
+            <p class="txt_inf">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget augue nisl. 
+              Suspendisse tempus sapien et risus bibendum rutrum. Morbi 
+              elementum ex non dui tempus, in facilisis ipsum mattis. Donec consectetur 
+              sit amet sem nec lobortis. In lacus nulla, ultrices id sodales sed, dapibus nec augue. 
+              Sed sollicitudin enim eu nisl tempus, at iaculis nulla varius. Proin porttitor orci eleifend 
+            </p>
+          </div>
+
+          <div id="content_wrap">
             <!-- <textarea class="ckeditor" name="contents"></textarea> -->
+            <div class="content"></div>
+            <div class="content"></div>
           </div>
         </div>
-        <select class='card_type'>
-          <option value="Pimg">상품 사진</option>
-          <option value="Pdimg">상품 상세사진</option>
-          <option value="Pifor">상품 소개</option>
-          <option value="Psize">상품 사이즈</option>
-          <option value="info">안내사항</option>
-        </select>
-        <div class="page_num"></div>
-      </div>
 
-      <div class="swiper-slide">
-        <div class="temp_box">
-          <div>
-            <textarea class="ckeditor" name="contents"></textarea>
-          </div>
-        </div>
         <select class='card_type'>
           <option value="Pimg">상품 사진</option>
           <option value="Pdimg">상품 상세사진</option>
@@ -147,55 +159,6 @@
           <option value="Psize">상품 사이즈</option>
           <option value="info">안내사항</option>
         </select>
-        <div class="page_num"></div>
-      </div>
-
-      <div class="swiper-slide">
-        <div class="temp_box">
-          <div>
-            <textarea class="ckeditor" name="contents"></textarea>
-          </div>
-        </div>
-        <select class='card_type'>
-          <option value="Pimg">상품 사진</option>
-          <option value="Pdimg">상품 상세사진</option>
-          <option value="Pifor">상품 소개</option>
-          <option value="Psize">상품 사이즈</option>
-          <option value="info">안내사항</option>
-        </select>
-        <div class="page_num"></div>
-      </div>
-
-      <div class="swiper-slide">
-        <div class="temp_box">
-          <div>
-            <textarea class="ckeditor" name="contents"></textarea>
-          </div>
-        </div>
-        <select class='card_type'>
-          <option value="Pimg">상품 사진</option>
-          <option value="Pdimg">상품 상세사진</option>
-          <option value="Pifor">상품 소개</option>
-          <option value="Psize">상품 사이즈</option>
-          <option value="info">안내사항</option>
-        </select>
-        <div class="page_num"></div>
-      </div>
-
-      <div class="swiper-slide">
-        <div class="temp_box">
-          <div>
-            <textarea class="ckeditor" name="contents"></textarea>
-          </div>
-        </div>
-        <select class='card_type'>
-          <option value="Pimg">상품 사진</option>
-          <option value="Pdimg">상품 상세사진</option>
-          <option value="Pifor">상품 소개</option>
-          <option value="Psize">상품 사이즈</option>
-          <option value="info">안내사항</option>
-        </select>
-        <div class="page_num"></div>
       </div>
 
     </div>
@@ -213,12 +176,56 @@
     </p>
   </div>
 
+
   <!-- Swiper JS -->
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
   <!-- Initialize Swiper -->
   <script>
-    var card_inf = `<div class="temp_box"></div><select class='card_type'><option value="Pimg">상품 사진</option><option value="Pdimg">상품 상세사진</option><option value="Pifor">상품 소개</option><option value="Psize">상품 사이즈</option><option value="info">안내사항</option></select><div class="page_num"></div>`
+    var card_inf = `
+      <div class="swiper-slide">
+          <div class="temp_box">
+
+            <div class="txt_box">
+              <span class="txt_title">BRAND</span>
+              <p class="txt_inf">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget augue nisl. 
+                Suspendisse tempus sapien et risus bibendum rutrum. Morbi 
+                elementum ex non dui tempus, in facilisis ipsum mattis. Donec consectetur 
+                sit amet sem nec lobortis. In lacus nulla, ultrices id sodales sed, dapibus nec augue. 
+                Sed sollicitudin enim eu nisl tempus, at iaculis nulla varius. Proin porttitor orci eleifend 
+              </p>
+            </div>
+            
+            <div class="txt_box">
+              <span class="txt_title">BRAND</span>
+              <p class="txt_inf">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget augue nisl. 
+                Suspendisse tempus sapien et risus bibendum rutrum. Morbi 
+                elementum ex non dui tempus, in facilisis ipsum mattis. Donec consectetur 
+                sit amet sem nec lobortis. In lacus nulla, ultrices id sodales sed, dapibus nec augue. 
+                Sed sollicitudin enim eu nisl tempus, at iaculis nulla varius. Proin porttitor orci eleifend 
+              </p>
+            </div>
+
+            <div id="content_wrap">
+              <!-- <textarea class="ckeditor" name="contents"></textarea> -->
+              <div class="content"></div>
+              <div class="content"></div>
+            </div>
+          </div>
+
+          <select class='card_type'>
+            <option value="Pimg">상품 사진</option>
+            <option value="Pdimg">상품 상세사진</option>
+            <option value="Pifor">상품 소개</option>
+            <option value="Psize">상품 사이즈</option>
+            <option value="info">안내사항</option>
+          </select>
+        </div>
+
+      </div>
+      `
 		var appendNumber = 4;
     var prependNumber = 1;
     var swiper = new Swiper('.swiper-container', {
@@ -257,5 +264,7 @@
         ]);
     });
   </script>
+
+  <script src="script.js"></script>
 </body>
 </html>
