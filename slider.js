@@ -1,7 +1,6 @@
 var card_inf = `
 <div class="swiper-slide">
     <div class="temp_box">
-
       <div class="txt_box">
         <span class="txt_title">BRAND</span>
         <p class="txt_inf">
@@ -12,7 +11,6 @@ var card_inf = `
           Sed sollicitudin enim eu nisl tempus, at iaculis nulla varius. Proin porttitor orci eleifend 
         </p>
       </div>
-      
       <div class="txt_box">
         <span class="txt_title">BRAND</span>
         <p class="txt_inf">
@@ -23,11 +21,9 @@ var card_inf = `
           Sed sollicitudin enim eu nisl tempus, at iaculis nulla varius. Proin porttitor orci eleifend 
         </p>
       </div>
-
       <div id="content_wrap"><div class="content"></div><div class="content"></div></div>
     </div>
-
-    <select id='card_type'>
+    <select id='card_type' onchange="changeTheme();">
       <option value="Pimg">상품 사진</option>
       <option value="Pdimg">상품 상세사진</option>
       <option value="Pifor">상품 소개</option>
@@ -35,9 +31,9 @@ var card_inf = `
       <option value="info">안내사항</option>
     </select>
   </div>
-
 </div>
 `
+
 var appendNumber = 4;
 var prependNumber = 1;
 var swiper = new Swiper('.swiper-container', {

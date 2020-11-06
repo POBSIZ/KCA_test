@@ -1,7 +1,9 @@
-$('.content')
-  .on("dragover", dragOver)
-  .on("dragleave", dragOver)
-  .on("drop", uploadFiles);
+setContent = setInterval(function(){
+  $('.content')
+    .on("dragover", dragOver)
+    .on("dragleave", dragOver)
+    .on("drop", uploadFiles);
+}, 1000);
 
 function dragOver(e){
     e.stopPropagation();
@@ -44,56 +46,21 @@ function uploadFiles(e) {
 }
 
 function changeTheme(){
-    var card_theme_none = `
-    <div class="temp_box"></div>
-    `; 
-    var card_theme_default = `
-    <div class="temp_box">
-      <div class="txt_box">
-        <span class="txt_title">BRAND</span>
-        <p class="txt_inf">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget augue nisl. 
-          Suspendisse tempus sapien et risus bibendum rutrum. Morbi 
-          elementum ex non dui tempus, in facilisis ipsum mattis. Donec consectetur 
-          sit amet sem nec lobortis. In lacus nulla, ultrices id sodales sed, dapibus nec augue. 
-          Sed sollicitudin enim eu nisl tempus, at iaculis nulla varius. Proin porttitor orci eleifend 
-        </p>
-      </div>
-      
-      <div class="txt_box">
-        <span class="txt_title">BRAND</span>
-        <p class="txt_inf">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget augue nisl. 
-          Suspendisse tempus sapien et risus bibendum rutrum. Morbi 
-          elementum ex non dui tempus, in facilisis ipsum mattis. Donec consectetur 
-          sit amet sem nec lobortis. In lacus nulla, ultrices id sodales sed, dapibus nec augue. 
-          Sed sollicitudin enim eu nisl tempus, at iaculis nulla varius. Proin porttitor orci eleifend 
-        </p>
-      </div>
-      <div id="content_wrap"><div class="content"></div><div class="content"></div></div>
-    </div>
-    `; 
-    var card_theme_base = `
-    <div class="temp_box">
-        <div id="content_wrap"><div class="content"></div><div class="content"></div></div>
-    </div>
-    `
-
     var Ctype = document.getElementById("card_type");
     var selOpt = Ctype.selectedIndex;
     var optVal = Ctype.options[selOpt].value;
-    var tempBox = document.querySelector(".temp_box");
+    var tempBox = document.querySelector(".swiper-slide-active .temp_box");
 
     if(optVal == "Pimg"){
         tempBox.parentNode.removeChild(tempBox);
-        $(".swiper-slide").append(card_theme_default);
+        $(".swiper-slide-active").append(card_theme_default);
     }
     if(optVal == "Pdimg"){
         tempBox.parentNode.removeChild(tempBox);
-        $(".swiper-slide").append(card_theme_none);
+        $(".swiper-slide-active").append(card_theme_none);
     }
     if(optVal == "info"){
         tempBox.parentNode.removeChild(tempBox);
-        $(".swiper-slide").append(card_theme_base);
+        $(".swiper-slide-active").append(card_theme_base);
     }
 }

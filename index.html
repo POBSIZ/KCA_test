@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <title>KCA</title>
   <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script src="theme.js"></script>
   <link rel="stylesheet" href="swiper-bundle.css">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
   <!-- <script type="text/javascript" src="ckeditor/ckeditor.js"></script> -->
@@ -23,14 +24,14 @@
     body {
         position: relative;
         height: 100%;
-        background-color: #8f8f8f;
+        background-color: #e3e3e3;
     }
 
     body {
         /* background: #eee; */
         font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
         font-size: 14px;
-        color: #000;
+        color: rgb(97, 97, 97);
         margin: 0;
         padding: 0;
         }
@@ -43,7 +44,7 @@
     .swiper-slide {
       text-align: center;
       font-size: 18px;
-      background: #8f8f8f;
+      /* background: #8f8f8f; */
 
       /* Center slide text vertically */
       display: -webkit-box;
@@ -61,11 +62,11 @@
     }
     .temp_box{
       display: inline-block;
-      height: 30em;
-      width: 30em;
+      height: 550px;
+      width: 550px;
       border-radius: 40px 40px 40px 40px;
-      background-color: #8f8f8f;
-      box-shadow:  10px 10px 40px #666666, -10px -10px 40px #c0c0c0;
+      background-color: #e3e3e3;
+      box-shadow:  10px 10px 40px #c1c1c1, -10px -10px 40px #ffffff;
     }
 
     #card_type{
@@ -74,16 +75,16 @@
       display: inline-block;
       position: absolute;
       bottom: 41em;
-      color: white;
-      background-color: #8f8f8f;
+      color: rgb(97, 97, 97);
+      background-color: #e3e3e3;
       height: 50px;
       width: 25%;
       padding-left: 2%;
       border-radius: 40px 40px 40px 40px;
-      box-shadow:  5px 5px 13px #666666, -5px -5px 13px #c0c0c0;
+      box-shadow:  5px 5px 13px #c1c1c1, -5px -5px 13px #ffffff;
       transition: 1s;
     }#card_type:hover{
-      box-shadow: inset 10px 10px 10px #666666, inset -10px -10px 10px #c0c0c0;
+      box-shadow: inset 10px 10px 10px #c1c1c1, inset -10px -10px 10px #ffffff;
       transition: 1s;
     }
 
@@ -101,7 +102,7 @@
     .append-buttons a {
       display: inline-block;
       border: 1px solid #f5f5f5;
-      color: #f5f5f5;
+      color: rgb(97, 97, 97);
       text-decoration: none;
       padding: 4px 10px;
       border-radius: 4px;
@@ -118,9 +119,7 @@
   <!-- Swiper -->
   <div class="swiper-container">
     <div class="swiper-wrapper">
-
       <div class="swiper-slide">
-
         <div class="temp_box">
           <div class="txt_box">
             <span class="txt_title">BRAND</span>
@@ -146,7 +145,6 @@
             <div class="content"></div>
             <div class="content"></div>
           </div>
-          
         </div>
 
         <select id='card_type' onchange="changeTheme();">
@@ -157,7 +155,6 @@
           <option value="info">안내사항</option>
         </select>
       </div>
-
     </div>
 
     <div class="swiper-pagination"></div>
